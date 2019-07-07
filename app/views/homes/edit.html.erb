@@ -1,2 +1,9 @@
 <h1>Homes#edit</h1>
 <p>Find me in app/views/homes/edit.html.erb</p>
+
+<form action="/homes/update/<%=@user.id%>" method="get">
+    새 이름: <input type="text" value=<%=@user.name%> name="name"> <br>
+    새 이메일: <input type="email" value=<%=@user.email%> name="email"> <br>
+    새 패스워드: <input type="password" value=<%=@user.email%> name="password"> <br>
+    <input type="submit" value="수정완료">
+</form>
