@@ -4,6 +4,7 @@ class HomesController < ApplicationController
   end
 
   def new
+    @user = Post.new
   end
 
   def create

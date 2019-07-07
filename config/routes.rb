@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get 'homes/destroy/:id' => 'homes#destroy'
   
   root 'homes#index'
+  post 'homes/new'
+  post 'homes/create'
+  patch 'homes/update/:id' => 'homes#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
