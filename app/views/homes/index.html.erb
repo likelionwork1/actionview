@@ -2,7 +2,7 @@
 <p>Find me in app/views/homes/index.html.erb</p>
 
 <!--<a href="/homes/new"> 회원가입 </a>-->
-<%= link_to "회원가입", {:controller => "homes", :action => "new"} %>
+<%= link_to "회원가입", "/homes/new" %>
 
 <p> 가입된 회원 목록</p>
 <hr>
@@ -10,7 +10,7 @@
 <% @users.each do |u| %>
     이름: <%= u.name %>
     <!--<a href="/homes/show/<%= u.id %>"> 회원 정보 더 보기 </a>-->
-    <%= link_to "회원 정보 더 보기", {:controller => "homes", :action => "show", :id => u.id} %>
+    <%= link_to "회원 정보 더 보기", "/homes/show/#{u.id}" %>
     <hr>
 <% end %>
     
