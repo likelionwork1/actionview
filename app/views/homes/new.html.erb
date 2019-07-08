@@ -2,7 +2,7 @@
 <p>Find me in app/views/homes/new.html.erb</p>
 
 <!--<form action="/homes/create" method="get">-->
-<%= form_for @user, url: homes_path, method: :POST do |f| %>
+<%= form_for @user, url: homes_path, method: "POST" do |f| %>
     <!--이름: <input type="text" name="name"> <br>-->
     이름: <%= f.text_field :name %> <br>
     
