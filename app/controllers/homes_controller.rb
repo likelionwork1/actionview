@@ -9,9 +9,12 @@ class HomesController < ApplicationController
 
   def create
     @user = Post.new
-    @user.name = params[:name]
-    @user.email = params[:email]
-    @user.password = params[:password]
+    # @user.name = params[:name]
+    @user.name = params[:post][:name]
+    # @user.email = params[:email]
+    @user.email = params[:post][:email]
+    # @user.password = params[:password]
+    @user.password = params[:post][:password]
     @user.save
     
     redirect_to '/'
@@ -27,9 +30,12 @@ class HomesController < ApplicationController
 
   def update
     @user = Post.find(params[:id])
-    @user.name = params[:name]
-    @user.email = params[:email]
-    @user.password = params[:password]
+    # @user.name = params[:name]
+    @user.name = params[:post][:name]
+    # @user.email = params[:email]
+    @user.email = params[:post][:email]
+    # @user.password = params[:password]
+    @user.password = params[:post][:password]
     @user.save
     
     redirect_to '/'
